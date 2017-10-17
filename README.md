@@ -26,4 +26,5 @@
 ```
 
 # 注意事项
+ - CsharpSmsApiSample.cs为非sdk调用示例,sdk调用请参考CsharpClientTest.cs方法.
  - 详细api文档请参考<a target="_blank" href="https://web.100sms.cn/api1.0/document">https://web.100sms.cn/api1.0/document</a>
