@@ -2,41 +2,28 @@
 
 ---
 
- - 添加maven依赖
+ - 运行方法
  
-```xml
-<dependency>
-    <groupId>com.github.100sms</groupId>
-    <artifactId>yibai-sms-java-sdk</artifactId>
-    <version>1.0.0</version>
-</dependency>
 ```
-*如果非maven项目可手动<a target="_blank" href="http://search.maven.org/#search%7Cga%7C1%7Ccom.github.100sms">获取jar包</a>*
+1.在vs中新建控制台程序，将该sdk源码复制到新建的控制台程序中；
 
- - 调用方法
+2.在项目中引用Newtonsoft.Json.dll、System.Runtime.Serialization；
+
+3.在控制台程序的main方法中即可运行测试该sdk，具体测试方法参照该目录下CsharpClientTest.cs文件。
+```
+
+ - 打包方法
  
-```Java
- private static final String serverUrl = "https://sms.100sms.cn/api";
- private static final String apikey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxx";//修改为您的apikey
- private static final YibaiClient client = new DefaultYibaiClient(serverUrl, apikey);
+```
 
- public void testSmsBatchSubmit() {
-     try {
-         client.smsBatchSubmit(Arrays.asList(
-             new SmsSubmit("187xxxxxxxx", "【亿佰云通讯】您的验证码是：1234"),//修改为你要发送的手机号和短信内容
-             new SmsSubmit("186xxxxxxxx", "【亿佰云通讯】您的验证码是：5678")//修改为你要发送的手机号和短信内容
-         ));
-     } catch (YibaiApiException e) {
-         System.out.println("YibaiApiException, code: " + e.getCode() + ", message: " + e.getMessage());
-     } catch (Exception e) {
-         e.printStackTrace();
-     }
- }
+1.在vs中新建类库项目；
 
+2.将sdk源码复制到新建的类库项目中；
+
+3.在新建的类库项目中引用Newtonsoft.Json.dll、System.Runtime.Serialization；
+
+4.右键项目，点击生成，vs显示生成成功后，在项目的Debug目录中出现已生成的sdk的dll文件
 ```
 
 # 注意事项
-
- - 请使用jdk1.7或更高版本
- - 测试sdk请使用YibaiClientTest类,http请求测试请使用JavaSmsApiSample类
  - 详细api文档请参考<a target="_blank" href="https://web.100sms.cn/api1.0/document">https://web.100sms.cn/api1.0/document</a>
