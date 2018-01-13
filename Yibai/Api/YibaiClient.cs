@@ -17,5 +17,7 @@ namespace Yibai.Api
         List<SmsStatusReport> SmsPullStatusReport();
 
         List<SmsReplyMessage> SmsPullReplyMessage();
+
+        UserInfo UserInfo();
     }
 }

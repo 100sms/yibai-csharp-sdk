@@ -48,6 +48,12 @@ namespace Yibai.Api
             return execute<SmsPullReplyMessageResponse, List<SmsReplyMessage>>(request);
         }
 
+        public List<UserInfo> UserInfo()
+        {
+            UserInfoRequest request = new UserInfoRequest();
+            return execute<UserInfoResponse, List<UserInfo>>(request);
+        }
+
         protected R execute<T, R>(YibaiRequest<T> request) where T : YibaiResponse<R>
         {
             request.apikey = apikey;
