@@ -48,10 +48,10 @@ namespace Yibai.Api
             return execute<SmsPullReplyMessageResponse, List<SmsReplyMessage>>(request);
         }
 
-        public List<UserInfo> UserInfo()
+        public UserInfo UserInfo()
         {
             UserInfoRequest request = new UserInfoRequest();
-            return execute<UserInfoResponse, List<UserInfo>>(request);
+            return execute<UserInfoResponse, UserInfo>(request);
         }
 
         protected R execute<T, R>(YibaiRequest<T> request) where T : YibaiResponse<R>
