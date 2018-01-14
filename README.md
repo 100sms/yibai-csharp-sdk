@@ -27,4 +27,5 @@
 
 # 注意事项
  - CsharpSmsApiSample.cs为非sdk调用示例,sdk调用请参考CsharpClientTest.cs方法.
+ - 您可以使用编译好的Yibai.Sms.dll文件,如果出现环境问题,可以用源码自行打包使用.
  - 详细api文档请参考https://www.100sms.cn/api1.0/document
