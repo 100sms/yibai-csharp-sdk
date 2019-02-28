@@ -12,7 +12,7 @@ namespace Yibai
 {
     class Program
     {
-        private const String serverUrl = "https://sms.100sms.cn/api";
+        private const String serverUrl = "xxxxxxxxx";//修改为相应的api地址
         private const String apikey = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";//修改为您的apikey
         public static YibaiClient client = new DefaultYibaiClient(serverUrl, apikey);
 
