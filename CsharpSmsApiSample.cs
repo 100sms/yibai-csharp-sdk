@@ -25,7 +25,7 @@ namespace ShomopSdkTest
                 "  }]" +
                 "}"
             ).Replace('\'', '"');
-            Console.WriteLine(PostCURL("https://sms.100sms.cn/api/sms/batchSubmit", json));
+            Console.WriteLine(PostCURL("https://xxxxxxxx/api/sms/batchSubmit", json));
         }
 
         public static string PostCURL(string url, string postData)
